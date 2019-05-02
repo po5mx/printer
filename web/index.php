@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 $password = file_get_contents(__DIR__ . '/../password');
 if($_REQUEST['password'] != $password) {
+  print 'Invalid password';
   exit;
 }
 
